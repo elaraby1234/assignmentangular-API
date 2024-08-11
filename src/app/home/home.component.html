@@ -1,0 +1,21 @@
+<section class="border border-5 border-black text-bg-secondary " >
+    <div class="container">
+        <div class="row g-4">
+           @for (product of productsData; track $index) {
+            <div class="col-md-4">
+                <div class="card h-100 ">
+                    <img [src]="product.image" class="card-imag" alt="">
+                    <div class="card-body">
+                        <h3>id:{{product.id}}</h3>
+                        <h2>Titile:{{product.title}}</h2>
+                        <p>Price:{{product.price}}</p>
+                         <p>Describtion:{{product.description.split(" ",8).join(" ")}}</p>
+                         <p>category:<span>{{product.category}}</span></p>
+                         <p>Rating:<span>{{product.rating.count}}</span></p>
+                    </div>
+                </div>
+            </div>
+           }
+        </div>
+    </div>
+</section>
